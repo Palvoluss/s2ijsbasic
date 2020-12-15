@@ -1,0 +1,140 @@
+
+
+body {
+	background-color: #1f1f1f;
+	padding: 20px;
+  	font: 1em 'Signika', sans-serif;;
+
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: minmax(300px, 600px);
+  border: 15px solid black;
+  border-radius: 5em;
+  max-width: 600px;
+  margin: auto;
+}
+
+.logo img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 25px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.header {
+  align-self: center;
+}
+
+.header h1 {
+  font-size: 3em;
+  text-align: center;
+  line-height: 2em;
+  color: white;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  border: 8px solid white;
+  border-radius: 5em;
+  height: auto;
+  margin: 5px;
+}
+
+.input {
+    background: #ffffff4d;
+    border-style: none;
+    border-radius: 2em;
+    margin: 50px 10px;
+    text-align: center;
+    font-weight: 900;
+    color: white;
+}
+
+
+.button {
+  display: inline-block;
+  background-color: #2dd4657a;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.button#sub {
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+  border-top-right-radius: 4em;
+  border-bottom-right-radius: 0em;
+}
+
+.button#add {
+  border-top-left-radius: 0em;
+  border-bottom-left-radius: 4em;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span#subb:before  {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.button span#addd:after  {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: -2px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button#sub:active {
+  background-color: #2dd465;
+  transition: 0.1s;
+}
+
+.button#add:active {
+  background-color: #2dd465;
+  transition: 0.1s;
+}
+
+.button:hover span#subb  {
+  padding-left: 25px;
+}
+
+.button:hover span#addd  {
+  padding-right: 25px;
+}
+
+.button:hover span#subb:before  {
+  opacity: 1;
+  left: 0;
+}
+
+.button:hover span#addd:after  {
+  opacity: 1;
+  right: 0;
+}
+  
